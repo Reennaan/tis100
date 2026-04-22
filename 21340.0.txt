@@ -1,0 +1,57 @@
+@0
+MOV UP,DOWN
+
+@1
+
+
+@2
+
+
+@3
+
+
+@4
+MOV UP, DOWN
+
+@5
+MOV UP, RIGHT
+
+@6
+MOV LEFT, ACC
+JGZ G
+
+MOV 0, DOWN
+
+JMP F
+
+G:MOV 1,DOWN
+JMP F
+
+F:MOV ACC, RIGHT
+
+@7
+MOV LEFT, ACC
+JEZ E
+
+MOV 0, DOWN
+JMP F
+
+
+E:MOV 1, DOWN
+
+
+
+F:MOV ACC, RIGHT
+
+@8
+MOV LEFT, ACC
+JLZ M
+JMP F
+
+M:MOV 1,DOWN
+JMP NONE
+
+F:MOV 0, DOWN
+
+
+NONE:
